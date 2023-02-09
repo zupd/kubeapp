@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: pyapp
-        image: ghcr.io/zupd/pyapp:1.2
+        image: ghcr.io/zupd/pyapp:1.3
         resources:
           limits:
             memory: "128Mi"
