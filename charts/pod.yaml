@@ -3,7 +3,8 @@ kind: Pod
 metadata:
   name: pyapp
   namespace: pyapp
-
+  labels:
+    type: webserver
 spec:
   #initContainers:
   #  - name: init
@@ -25,18 +26,18 @@ spec:
         cpu: "250m"
         memory: "124Mi"
     ports:
-    - name: pyapp-http
+    - name: http
       containerPort: 8888
     readinessProbe:
       httpGet: 
         path: /
-        port: myapp-http
+        port: http
       initialDelaySeconds: 5
       periodSeconds: 10
     livenessProbe:
       httpGet: 
         path: /
-        port: myapp-http
+        port: http
       initialDelaySeconds: 5
       periodSeconds: 10
     #startupProbe:
