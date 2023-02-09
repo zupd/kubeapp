@@ -16,7 +16,7 @@ spec:
 
   containers:
   - name: pyapp
-    image: ghcr.io/zupd/pyapp:1.0
+    image: ghcr.io/zupd/pyapp:1.2
     resources:
       requests:
         cpu: "125m"
